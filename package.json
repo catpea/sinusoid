@@ -1,6 +1,6 @@
 {
   "name": "sinusoid",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple and lightweight Signal Implementation withut any unusual extras.",
   "main": "index.js",
   "type": "module",
