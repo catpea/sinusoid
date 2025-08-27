@@ -2,7 +2,7 @@
   "name": "sinusoid",
   "version": "1.0.1",
   "description": "Simple and lightweight Signal Implementation withut any unusual extras.",
-  "main": "Signal.js",
+  "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "node --test",
