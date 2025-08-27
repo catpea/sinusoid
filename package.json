@@ -1,0 +1,36 @@
+{
+  "name": "sinusoid",
+  "version": "1.0.0",
+  "description": "Simple and lightweight Signal Implementation withut any unusual extras.",
+  "main": "Signal.js",
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "save": "git add .; git commit -m 'Updated Release'; npm version patch; npm publish; git push --follow-tags;"
+  },
+  "keywords": [
+    "rev",
+    "fp"
+  ],
+  "author": "@catpea",
+  "license": "GPL",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/catpea/sinusoid.git"
+  },
+  "bugs": {
+    "url": "https://github.com/catpea/sinusoid/issues"
+  },
+  "homepage": "https://github.com/catpea/sinusoid#readme",
+  "devDependencies": {},
+  "localDependencies": {
+    "../ladybits": "^2.0.0",
+    "../heebiejeebies": "^1.0.5",
+    "../mlue/": "^1.0.7"
+  },
+  "dependencies": {
+    "ladybits": "^2.0.0",
+    "heebiejeebies": "^1.0.5",
+    "mlue": "^1.0.7"
+  }
+}
