@@ -1,4 +1,4 @@
-export default class Signal {
+export class Signal {
   #id;
   #value;
   #subscribers;
@@ -120,5 +120,34 @@ export default class Signal {
       return Number(this.value);
     }
     return this.value; // default case
+  }
+}
+
+export class DisposableSinusoidalListener {
+  #unsubscribe;
+
+  constructor( signal, handler, options ) {
+    this.signal = signal;
+    this.handler = handler;
+    this.options = options;
+    this.isDisposed = false;
+
+    // Add the listener
+    this.#unsubscribe = this.signal.subscribe(this.#listener.bind(this));
+  }
+
+  #listener(v) {
+    this.handler(v);
+  }
+
+  dispose() {
+    if (this.isDisposed) {
+      console.warn("Event listener already disposed.");
+      return;
+    }
+    // Remove the event listener
+    this.#unsubscribe();
+    this.isDisposed = true;
+    console.log(`Event listener for ${this.event} disposed.`);
   }
 }

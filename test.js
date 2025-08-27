@@ -1,7 +1,7 @@
 import test from 'node:test';
 import { strict as assert } from 'node:assert';
 
-import Signal from './Signal.js';
+import { Signal } from './Signal.js';
 
 test('synchronous passing test', (t) => {
 
